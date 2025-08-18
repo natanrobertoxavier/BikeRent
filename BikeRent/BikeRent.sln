@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solutonitems", "solutonitems", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A4053225-6331-4C04-A234-E5A24FD43042}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F693069A-9D82-4DC3-8006-2925A79CF70A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeRent.Api", "BikeRent.Api\BikeRent.Api.csproj", "{AB54DE39-EFFE-49A5-89AB-A913816F7C5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeRent.Application", "BikeRent.Application\BikeRent.Application.csproj", "{1A564924-38DF-42AE-944E-C46116D881BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeRent.Domain", "BikeRent.Domain\BikeRent.Domain.csproj", "{83BB0C01-0FB1-4F9F-95BC-B88AD22E280E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeRent.Infrastructure", "BikeRent.Infrastructure\BikeRent.Infrastructure.csproj", "{AF367E86-D3B6-45DD-9EF7-A5DBD730DCED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{AFEA1B90-9F38-49C2-94D8-8D8C1668F18F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{AFDD779C-1CBC-4ECD-93C5-CEF17134CA77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeRent.Exception", "..\BikeException\BikeRent.Exception\BikeRent.Exception.csproj", "{14EB9BEB-D8C9-2909-C300-371D4C01A39E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB54DE39-EFFE-49A5-89AB-A913816F7C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB54DE39-EFFE-49A5-89AB-A913816F7C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB54DE39-EFFE-49A5-89AB-A913816F7C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB54DE39-EFFE-49A5-89AB-A913816F7C5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A564924-38DF-42AE-944E-C46116D881BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A564924-38DF-42AE-944E-C46116D881BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A564924-38DF-42AE-944E-C46116D881BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A564924-38DF-42AE-944E-C46116D881BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BB0C01-0FB1-4F9F-95BC-B88AD22E280E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BB0C01-0FB1-4F9F-95BC-B88AD22E280E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BB0C01-0FB1-4F9F-95BC-B88AD22E280E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BB0C01-0FB1-4F9F-95BC-B88AD22E280E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF367E86-D3B6-45DD-9EF7-A5DBD730DCED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF367E86-D3B6-45DD-9EF7-A5DBD730DCED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF367E86-D3B6-45DD-9EF7-A5DBD730DCED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF367E86-D3B6-45DD-9EF7-A5DBD730DCED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14EB9BEB-D8C9-2909-C300-371D4C01A39E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14EB9BEB-D8C9-2909-C300-371D4C01A39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14EB9BEB-D8C9-2909-C300-371D4C01A39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14EB9BEB-D8C9-2909-C300-371D4C01A39E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB54DE39-EFFE-49A5-89AB-A913816F7C5F} = {AFDD779C-1CBC-4ECD-93C5-CEF17134CA77}
+		{1A564924-38DF-42AE-944E-C46116D881BE} = {AFDD779C-1CBC-4ECD-93C5-CEF17134CA77}
+		{83BB0C01-0FB1-4F9F-95BC-B88AD22E280E} = {AFDD779C-1CBC-4ECD-93C5-CEF17134CA77}
+		{AF367E86-D3B6-45DD-9EF7-A5DBD730DCED} = {AFDD779C-1CBC-4ECD-93C5-CEF17134CA77}
+		{AFEA1B90-9F38-49C2-94D8-8D8C1668F18F} = {A4053225-6331-4C04-A234-E5A24FD43042}
+		{AFDD779C-1CBC-4ECD-93C5-CEF17134CA77} = {A4053225-6331-4C04-A234-E5A24FD43042}
+		{14EB9BEB-D8C9-2909-C300-371D4C01A39E} = {AFEA1B90-9F38-49C2-94D8-8D8C1668F18F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D40B47B-9D37-4534-BB3F-3B5786D126A4}
+	EndGlobalSection
+EndGlobal
