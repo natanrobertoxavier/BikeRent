@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeRent.Exception", "..\Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeDeliveryMan.Communication", "BikeDeliveryMan.Communication\BikeDeliveryMan.Communication.csproj", "{C7E389D1-73B5-4757-9D46-D4B697DBCEF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeDeliveryMan.Test", "BikeDeliveryMan.Test\BikeDeliveryMan.Test.csproj", "{B84B380B-E75B-453F-BF3A-B40CD42B733E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{C7E389D1-73B5-4757-9D46-D4B697DBCEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7E389D1-73B5-4757-9D46-D4B697DBCEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7E389D1-73B5-4757-9D46-D4B697DBCEF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84B380B-E75B-453F-BF3A-B40CD42B733E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84B380B-E75B-453F-BF3A-B40CD42B733E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84B380B-E75B-453F-BF3A-B40CD42B733E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84B380B-E75B-453F-BF3A-B40CD42B733E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{5E29E807-F9CB-426A-AC08-A2BF8BF78A53} = {6F051442-2C57-467C-86E1-192CF04D8C57}
 		{14EB9BEB-D8C9-2909-C300-371D4C01A39E} = {59A4769C-2A54-445A-8082-5EAFE9EFAC99}
 		{C7E389D1-73B5-4757-9D46-D4B697DBCEF5} = {59A4769C-2A54-445A-8082-5EAFE9EFAC99}
+		{B84B380B-E75B-453F-BF3A-B40CD42B733E} = {27EEEDDB-9E0E-4845-A14B-C75527AB44E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {51B998C5-0C42-47D5-BDBD-26C6ED64A470}

@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace BikeAdm.Domain.Entities;
+namespace Bike.Domain.Entities;
 
 public abstract class BaseEntity
 {
