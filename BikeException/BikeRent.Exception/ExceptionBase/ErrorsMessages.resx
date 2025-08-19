@@ -117,7 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BlankEmail" xml:space="preserve">
+    <value>E-mail não pode estar em branco</value>
+  </data>
+  <data name="BlankName" xml:space="preserve">
+    <value>Nome não pode estar em branco</value>
+  </data>
+  <data name="BlankPassword" xml:space="preserve">
+    <value>Senha não pode estar em branco</value>
+  </data>
+  <data name="EmailAlreadyRegistered" xml:space="preserve">
+    <value>Email já cadastrado</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>E-mail informado inválido</value>
+  </data>
   <data name="InvalidLogin" xml:space="preserve">
     <value>E-mail ou senha incorretos</value>
+  </data>
+  <data name="MinimumSixCharacters" xml:space="preserve">
+    <value>Senha deve conter ao menos seis caractres</value>
   </data>
 </root>

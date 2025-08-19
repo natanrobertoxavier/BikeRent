@@ -22,21 +22,21 @@ namespace BikeRent.Exception.ExceptionBase {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ErrorsMessages {
+    public class ErrorsMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ErrorsMessages() {
+        public ErrorsMessages() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BikeRent.Exception.ExceptionBase.ErrorsMessages", typeof(ErrorsMessages).Assembly);
@@ -51,7 +51,7 @@ namespace BikeRent.Exception.ExceptionBase {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,11 +61,65 @@ namespace BikeRent.Exception.ExceptionBase {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E-mail não pode estar em branco.
+        /// </summary>
+        public static string BlankEmail {
+            get {
+                return ResourceManager.GetString("BlankEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome não pode estar em branco.
+        /// </summary>
+        public static string BlankName {
+            get {
+                return ResourceManager.GetString("BlankName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senha não pode estar em branco.
+        /// </summary>
+        public static string BlankPassword {
+            get {
+                return ResourceManager.GetString("BlankPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email já cadastrado.
+        /// </summary>
+        public static string EmailAlreadyRegistered {
+            get {
+                return ResourceManager.GetString("EmailAlreadyRegistered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-mail informado inválido.
+        /// </summary>
+        public static string InvalidEmail {
+            get {
+                return ResourceManager.GetString("InvalidEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-mail ou senha incorretos.
         /// </summary>
-        internal static string InvalidLogin {
+        public static string InvalidLogin {
             get {
                 return ResourceManager.GetString("InvalidLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senha deve conter ao menos seis caractres.
+        /// </summary>
+        public static string MinimumSixCharacters {
+            get {
+                return ResourceManager.GetString("MinimumSixCharacters", resourceCulture);
             }
         }
     }
