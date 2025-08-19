@@ -24,12 +24,13 @@ public class SendPhotoUseCase(
         {
             _logger.Information($"Início {nameof(SendPhotoAsync)}.");
 
-            Validate(file);
-
+            var extension = ValidateAndGetExtension(file);
             var fileName = await GetFileName();
+            fileName += extension;
+
             await _photoStorageService.SavePhotoAsync(fileName, file);
 
-            output.Succeeded(new MessageResult("Foto atualizada com sucesso"));
+            output.Succeeded(new MessageResult("Foto persistida com sucesso"));
             _logger.Information($"Fim {nameof(SendPhotoAsync)}.");
         }
         catch (ValidationErrorsException ex)
@@ -48,7 +49,7 @@ public class SendPhotoUseCase(
         return output;
     }
 
-    private static void Validate(IFormFile file)
+    private static string ValidateAndGetExtension(IFormFile file)
     {
         if (file == null || file.Length == 0)
             throw new ValidationErrorsException(new() { ErrorsMessages.BlankPhoto });
@@ -56,11 +57,13 @@ public class SendPhotoUseCase(
         var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
         if (extension != ".png" && extension != ".bmp")
             throw new ValidationErrorsException(new() { ErrorsMessages.FormatPhoto });
+
+        return extension;
     }
 
     private async Task<string> GetFileName()
     {
         var loggedUser = await _loggedUser.GetLoggedUserAsync() ?? throw new BikeRentException("Usuário não autenticado");
-        return loggedUser.Id.ToString().Replace("-", "");
+        return loggedUser.Id.ToString();
     }
 }

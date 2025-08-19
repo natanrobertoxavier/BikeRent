@@ -23,12 +23,7 @@ public class AuthenticatedUserAttribute(
             var token = TokenInRequest(context);
             var userEmail = _tokenController.RecoverEmail(token);
 
-            var user = await _deliveryManReadOnlyrepository.RecoverByEmailAsync(userEmail);
-
-            if (user?.Id == Guid.Empty)
-            {
-                throw new ValidationException("Usuário não localizado");
-            }
+            var user = await _deliveryManReadOnlyrepository.RecoverByEmailAsync(userEmail) ?? throw new ValidationException("Usuário não localizado");
         }
         catch (SecurityTokenExpiredException)
         {

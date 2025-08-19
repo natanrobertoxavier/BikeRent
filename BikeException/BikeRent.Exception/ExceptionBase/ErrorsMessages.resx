@@ -157,7 +157,7 @@
     <value>Token expirado</value>
   </data>
   <data name="FormatPhoto" xml:space="preserve">
-    <value>A foto deve ser JPG ou BMP</value>
+    <value>A foto deve ser PNG ou BMP</value>
   </data>
   <data name="InvalidCNPJ" xml:space="preserve">
     <value>CNPJ informado é inválido</value>

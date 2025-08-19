@@ -10,8 +10,7 @@ public class ResponseDeliveryMan
         string cnpj,
         DateTime birthDate,
         string cnhNumber,
-        string cnhType,
-        bool photoSent)
+        string cnhType)
     {
         Id = id;
         RegistrationDate = registrationDate;
@@ -21,7 +20,6 @@ public class ResponseDeliveryMan
         BirthDate = birthDate;
         CNHNumber = cnhNumber;
         CNHType = cnhType;
-        PhotoSent = photoSent;
     }
 
     public ResponseDeliveryMan()
@@ -36,5 +34,4 @@ public class ResponseDeliveryMan
     public DateTime BirthDate { get; set; }
     public string CNHNumber { get; set; }
     public string CNHType { get; set; }
-    public bool PhotoSent { get; set; }
 }
