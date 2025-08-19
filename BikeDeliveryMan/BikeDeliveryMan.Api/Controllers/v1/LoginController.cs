@@ -1,12 +1,12 @@
-﻿using BikeAdm.Application.UseCase.Login;
-using BikeAdm.Communication.Request;
-using BikeAdm.Communication.Response;
+﻿using BikeDeliveryMan.Application.UseCase.Login;
+using BikeDeliveryMan.Communication.Request;
+using BikeDeliveryMan.Communication.Response;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace BikeAdm.Api.Controllers.v1;
+namespace BikeDeliveryMan.Api.Controllers.v1;
 
-public class LoginController : BikeAdmController
+public class LoginController : BikeDeliveryManController
 {
     [HttpPost]
     [ProducesResponseType(typeof(Result<ResponseLogin>), StatusCodes.Status200OK)]
@@ -14,7 +14,7 @@ public class LoginController : BikeAdmController
     [ProducesResponseType(typeof(Result<ResponseLogin>), StatusCodes.Status422UnprocessableEntity)]
     public async Task<IActionResult> RecoverByEmailPasswordAsync(
         [FromServices] ILoginUseCase useCase,
-        [FromBody] RequestLoginUser request)
+        [FromBody] RequestLoginDeliveryMan request)
     {
         var result = await useCase.LoginAsync(request);
 

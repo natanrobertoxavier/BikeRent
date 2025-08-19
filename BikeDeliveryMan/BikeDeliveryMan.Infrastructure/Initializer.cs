@@ -1,9 +1,9 @@
-﻿using BikeAdm.Domain.Repositories.Contracts.User;
-using BikeAdm.Infrastructure.Repositories;
+﻿using BikeDeliveryMan.Domain.Repositories.Contracts.User;
+using BikeDeliveryMan.Infrastructure.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BikeAdm.Infrastructure;
+namespace BikeDeliveryMan.Infrastructure;
 
 public static class Initializer
 {
@@ -15,7 +15,7 @@ public static class Initializer
     private static void AddRepositories(IServiceCollection services)
     {
         services
-            .AddScoped<IUserWriteOnly, UserRepository>()
-            .AddScoped<IUserReadOnly, UserRepository>();
+            .AddScoped<IDeliveryManWriteOnly, DeliveryManRepository>()
+            .AddScoped<IDeliveryManReadOnly, DeliveryManRepository>();
     }
 }

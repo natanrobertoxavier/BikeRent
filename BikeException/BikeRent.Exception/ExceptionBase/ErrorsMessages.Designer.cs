@@ -61,6 +61,33 @@ namespace BikeRent.Exception.ExceptionBase {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data de nascimento não pode estar em branco.
+        /// </summary>
+        public static string BlankBirthDate {
+            get {
+                return ResourceManager.GetString("BlankBirthDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Número da CNH não pode estar em branco.
+        /// </summary>
+        public static string BlankCNHNumber {
+            get {
+                return ResourceManager.GetString("BlankCNHNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CNPJ não pode estar em branco.
+        /// </summary>
+        public static string BlankCNPJ {
+            get {
+                return ResourceManager.GetString("BlankCNPJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-mail não pode estar em branco.
         /// </summary>
         public static string BlankEmail {
@@ -88,11 +115,56 @@ namespace BikeRent.Exception.ExceptionBase {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email já cadastrado.
+        ///   Looks up a localized string similar to CNH já cadastrada.
+        /// </summary>
+        public static string CNHAlreadyRegistered {
+            get {
+                return ResourceManager.GetString("CNHAlreadyRegistered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Categoria da CNH inválida.
+        /// </summary>
+        public static string CNHCategory {
+            get {
+                return ResourceManager.GetString("CNHCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CNPJ já cadastrado.
+        /// </summary>
+        public static string CNPJAlreadyRegistered {
+            get {
+                return ResourceManager.GetString("CNPJAlreadyRegistered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo CNPJ deve conter apenas números.
+        /// </summary>
+        public static string CNPJOnlyNumbers {
+            get {
+                return ResourceManager.GetString("CNPJOnlyNumbers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-mail já cadastrado.
         /// </summary>
         public static string EmailAlreadyRegistered {
             get {
                 return ResourceManager.GetString("EmailAlreadyRegistered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CNPJ informado é inválido.
+        /// </summary>
+        public static string InvalidCNPJ {
+            get {
+                return ResourceManager.GetString("InvalidCNPJ", resourceCulture);
             }
         }
         

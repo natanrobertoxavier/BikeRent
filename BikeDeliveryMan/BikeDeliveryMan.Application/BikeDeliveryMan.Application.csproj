@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+		<PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0" />
+		<PackageReference Include="TokenService.Manager" Version="1.0.1" />
+		<PackageReference Include="FluentValidation" Version="11.9.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\BikeDeliveryMan.Communication\BikeDeliveryMan.Communication.csproj" />
+	  <ProjectReference Include="..\BikeDeliveryMan.Domain\BikeDeliveryMan.Domain.csproj" />
+	</ItemGroup>
+
 </Project>

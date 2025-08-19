@@ -1,25 +1,25 @@
-﻿using BikeAdm.Application.Mapping;
-using BikeAdm.Communication.Request;
-using BikeAdm.Communication.Response;
-using BikeAdm.Domain.Repositories.Contracts.User;
+﻿using BikeDeliveryMan.Application.Mapping;
+using BikeDeliveryMan.Communication.Request;
+using BikeDeliveryMan.Communication.Response;
+using BikeDeliveryMan.Domain.Repositories.Contracts.User;
 using BikeRent.Exception.ExceptionBase;
 using Serilog;
 using TokenService.Manager.Controller;
 
-namespace BikeAdm.Application.UseCase.Login;
+namespace BikeDeliveryMan.Application.UseCase.Login;
 
 public class LoginUseCase(
-    IUserReadOnly userReadOnlyrepository,
+    IDeliveryManReadOnly deliveryManReadOnlyrepository,
     PasswordEncryptor passwordEncryptor,
     TokenController tokenController,
     ILogger logger) : ILoginUseCase
 {
-    private readonly IUserReadOnly _userReadOnlyrepository = userReadOnlyrepository;
+    private readonly IDeliveryManReadOnly _deliveryManReadOnlyrepository = deliveryManReadOnlyrepository;
     private readonly PasswordEncryptor _passwordEncryptor = passwordEncryptor;
     private readonly TokenController _tokenController = tokenController;
     private readonly ILogger _logger = logger;
 
-    public async Task<Result<ResponseLogin>> LoginAsync(RequestLoginUser request)
+    public async Task<Result<ResponseLogin>> LoginAsync(RequestLoginDeliveryMan request)
     {
         var output = new Result<ResponseLogin>();
 
@@ -29,7 +29,7 @@ public class LoginUseCase(
 
             var encryptedPassword = _passwordEncryptor.Encrypt(request.Password);
 
-            var entity = await _userReadOnlyrepository.RecoverByEmailPasswordAsync(request.Email.ToLower(), encryptedPassword);
+            var entity = await _deliveryManReadOnlyrepository.RecoverByEmailPasswordAsync(request.Email.ToLower(), encryptedPassword);
 
             if (entity is null)
             {
