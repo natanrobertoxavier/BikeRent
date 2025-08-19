@@ -1,5 +1,7 @@
-﻿using BikeDeliveryMan.Application.UseCase.Login;
+﻿using BikeDeliveryMan.Application.Services;
+using BikeDeliveryMan.Application.UseCase.Login;
 using BikeDeliveryMan.Application.UseCase.Register;
+using BikeDeliveryMan.Application.UseCase.SendPhoto;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
@@ -11,17 +13,24 @@ public static class Initializer
 {
     public static void AddApplication(this IServiceCollection services, IConfiguration configuration)
     {
+        AddLoggedUsers(services);
         AddUseCases(services);
         AddAdditionalKeyPassword(services, configuration);
         AddJWTToken(services, configuration);
         AddSerilog(services, configuration);
     }
 
+    private static void AddLoggedUsers(IServiceCollection services)
+    {
+        services.AddScoped<ILoggedUser, LoggedUser>();
+    }
+
     private static void AddUseCases(IServiceCollection services)
     {
         services
             .AddScoped<IRegisterUseCase, RegisterUseCase>()
-            .AddScoped<ILoginUseCase, LoginUseCase>();
+            .AddScoped<ILoginUseCase, LoginUseCase>()
+            .AddScoped<ISendPhotoUseCase, SendPhotoUseCase>();
     }
 
     private static void AddAdditionalKeyPassword(IServiceCollection services, IConfiguration configuration)

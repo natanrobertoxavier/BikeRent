@@ -11,7 +11,8 @@ public class DeliveryMan : BaseEntity
         string cnpj,
         DateTime birthDate,
         string cnhNumber,
-        string cnhCategory) : base(id, registrationDate)
+        string cnhCategory,
+        bool photoSent) : base(id, registrationDate)
     {
         Name = name;
         Email = email;
@@ -20,6 +21,7 @@ public class DeliveryMan : BaseEntity
         BirthDate = birthDate;
         CNHNumber = cnhNumber;
         CNHCategory = cnhCategory;
+        PhotoSent = photoSent;
     }
 
     public DeliveryMan(
@@ -29,7 +31,8 @@ public class DeliveryMan : BaseEntity
         string cnpj,
         DateTime birthDate,
         string cnhNumber,
-        string cnhType)
+        string cnhType,
+        bool photoSent)
     {
         Name = name;
         Email = email;
@@ -38,6 +41,7 @@ public class DeliveryMan : BaseEntity
         BirthDate = birthDate;
         CNHNumber = cnhNumber;
         CNHCategory = cnhType;
+        PhotoSent = photoSent;
     }
 
     public DeliveryMan()
@@ -51,4 +55,5 @@ public class DeliveryMan : BaseEntity
     public DateTime BirthDate { get; set; }
     public string CNHNumber { get; set; }
     public string CNHCategory { get; set; }
+    public bool PhotoSent { get; set; }
 }

@@ -1,4 +1,5 @@
-﻿using BikeDeliveryMan.Application.UseCase.Register;
+﻿using BikeDeliveryMan.Api.Filters;
+using BikeDeliveryMan.Application.UseCase.Register;
 using BikeDeliveryMan.Communication.Request;
 using BikeDeliveryMan.Communication.Response;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,19 @@ public class DeliveryManController : BikeDeliveryManController
     [ProducesResponseType(typeof(Result<MessageResult>), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(Result<MessageResult>), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> RegisterDeliveryManAsync(
+        [FromServices] IRegisterUseCase useCase,
+        [FromBody] RegisterDeliveryMan request)
+    {
+        var result = await useCase.RegisterDeliveryManAsync(request);
+
+        return ResponseCreate(result);
+    }
+
+    [HttpPost("send-photo")]
+    [ServiceFilter(typeof(AuthenticatedUserAttribute))]
+    [ProducesResponseType(typeof(Result<MessageResult>), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(Result<MessageResult>), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> SendPhotoAsync(
         [FromServices] IRegisterUseCase useCase,
         [FromBody] RegisterDeliveryMan request)
     {

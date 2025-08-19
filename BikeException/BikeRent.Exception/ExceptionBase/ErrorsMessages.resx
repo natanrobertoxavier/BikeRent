@@ -135,6 +135,9 @@
   <data name="BlankPassword" xml:space="preserve">
     <value>Senha não pode estar em branco</value>
   </data>
+  <data name="BlankPhoto" xml:space="preserve">
+    <value>É necessário enviar a foto</value>
+  </data>
   <data name="CNHAlreadyRegistered" xml:space="preserve">
     <value>CNH já cadastrada</value>
   </data>
@@ -150,6 +153,12 @@
   <data name="EmailAlreadyRegistered" xml:space="preserve">
     <value>E-mail já cadastrado</value>
   </data>
+  <data name="ExpiredToken" xml:space="preserve">
+    <value>Token expirado</value>
+  </data>
+  <data name="FormatPhoto" xml:space="preserve">
+    <value>A foto deve ser JPG ou BMP</value>
+  </data>
   <data name="InvalidCNPJ" xml:space="preserve">
     <value>CNPJ informado é inválido</value>
   </data>
@@ -161,5 +170,8 @@
   </data>
   <data name="MinimumSixCharacters" xml:space="preserve">
     <value>Senha deve conter ao menos seis caractres</value>
+  </data>
+  <data name="UserWithoutPermission" xml:space="preserve">
+    <value>Usuário sem permissão</value>
   </data>
 </root>

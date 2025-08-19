@@ -17,7 +17,8 @@ public static class DeliveryManMappingDeliveryManMapping
             request.CNPJ,
             request.BirthDate,
             request.CNHNumber,
-            request.CNHCategory
+            request.CNHCategory,
+            photoSent: false
         );
     }
 
@@ -31,7 +32,8 @@ public static class DeliveryManMappingDeliveryManMapping
             deliveryMan.CNPJ,
             deliveryMan.BirthDate,
             deliveryMan.CNHNumber,
-            deliveryMan.CNHCategory
+            deliveryMan.CNHCategory,
+            deliveryMan.PhotoSent
         );
     }
 

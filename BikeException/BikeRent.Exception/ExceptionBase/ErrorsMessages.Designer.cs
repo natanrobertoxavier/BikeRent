@@ -115,6 +115,15 @@ namespace BikeRent.Exception.ExceptionBase {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to É necessário enviar a foto.
+        /// </summary>
+        public static string BlankPhoto {
+            get {
+                return ResourceManager.GetString("BlankPhoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CNH já cadastrada.
         /// </summary>
         public static string CNHAlreadyRegistered {
@@ -160,6 +169,24 @@ namespace BikeRent.Exception.ExceptionBase {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Token expirado.
+        /// </summary>
+        public static string ExpiredToken {
+            get {
+                return ResourceManager.GetString("ExpiredToken", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A foto deve ser JPG ou BMP.
+        /// </summary>
+        public static string FormatPhoto {
+            get {
+                return ResourceManager.GetString("FormatPhoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CNPJ informado é inválido.
         /// </summary>
         public static string InvalidCNPJ {
@@ -192,6 +219,15 @@ namespace BikeRent.Exception.ExceptionBase {
         public static string MinimumSixCharacters {
             get {
                 return ResourceManager.GetString("MinimumSixCharacters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuário sem permissão.
+        /// </summary>
+        public static string UserWithoutPermission {
+            get {
+                return ResourceManager.GetString("UserWithoutPermission", resourceCulture);
             }
         }
     }
